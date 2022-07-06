@@ -1,27 +1,30 @@
 const getAllTasks = (req, res) => {
-  res.status(200).send('all items')
-}
+  res.status(200).send("all items");
+};
 
 const getTask = (req, res) => {
-  res.status(200).send('single item')
-}
+  const {id} = req.params;
+  res.status(200).json({id: id});
+};
 
 const createTask = (req, res) => {
-  res.status(200).send('task created')
-}
+  res.status(200).json(req.body);
+};
 
 const updateTask = (req, res) => {
-  res.status(200).send('task updated')
-}
+  const {id} = req.params;
+  res.status(200).json({id: id})
+};
 
 const deleteTask = (req, res) => {
-  res.status(200).send('task deleted')
-}
+  const {id} = req.params;
+  res.status(200).json({id: id})
+};
 
 module.exports = {
   getAllTasks,
   getTask,
   createTask,
   updateTask,
-  deleteTask
-}
+  deleteTask,
+};
