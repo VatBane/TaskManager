@@ -1,3 +1,5 @@
+const Task = require('../models/Task')
+
 const getAllTasks = (req, res) => {
   res.status(200).send("all items");
 };
