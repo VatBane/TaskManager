@@ -43,7 +43,7 @@ const updateTask = async (req, res) => {
       new: true,
       runValidators: true,
     });
-    
+
     if (!task) {
       return res
         .status(404)
