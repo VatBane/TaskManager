@@ -10,11 +10,11 @@ const TaskSchema = new mongoose.Schema({
   completed: {
     type: Boolean,
     default: false,
-  },
-  user: {
-    type: String,
-    required: [true, "Please, provide users' id"],
-  }
+  }//,
+  //user: {
+  //  type: String,
+  //  required: [true, "Please, provide users' id"],
+  //}
 });
 
 module.exports = mongoose.model("Task", TaskSchema);
