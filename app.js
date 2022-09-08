@@ -19,7 +19,7 @@ app.all("*", (req, res) => {
   res.status(404).send("Not Found");
 });
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const start = async ()=>{
   try {
